@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+11Play - Weekly Settlement
+</title>
+
+
+<meta name="description" content="11Play Weekly Settlement Management System">
+
+
+<link rel="stylesheet" href="assets/css/style.css">
+<meta name="theme-color" content="#0b1f3a">
+
+<link rel="icon" href="assets/images/11play-logo.png">
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="app-wrapper">
+
+
+
+<!-- Background Watermark Logo -->
+
+<div class="background-logo">
+
+<img 
+src="assets/images/11play-logo-watermark.png"
+alt="11Play Watermark Logo">
+
+</div>
+
+
+
+
+
+<!-- Header -->
+
+<header class="main-header">
+
+
+<div class="brand-area">
+
+
+<img 
+src="assets/images/11play-logo.png"
+class="main-logo"
+alt="11Play Logo">
+
+
+
+<div>
+
+<h1>
+11PLAY
+</h1>
+
+
+<p>
+WEEKLY SETTLEMENT
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="settlement-info">
+
+
+
+<div>
+
+<span>
+Settlement Period
+</span>
+
+
+<strong id="settlementPeriod">
+
+Not Started
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+<span>
+Settlement ID
+</span>
+
+
+<strong id="settlementId">
+
+-
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+<span>
+Status
+</span>
+
+
+<strong id="settlementStatus">
+
+-
+
+</strong>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- Start Settlement -->
+
+
+<section 
+id="startSettlementSection"
+class="panel">
+
+
+
+<button id="startSettlementBtn">
+
+Start New Settlement
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Dashboard -->
+
+<main id="dashboard">
+
+
+
+
+
+
+
+
+<!-- Main Summary -->
+
+
+<section class="panel">
+
+
+<h2>
+MAIN SUMMARY
+</h2>
+
+
+
+
+<div class="summary-grid">
+
+
+
+
+
+<div class="summary-card">
+
+
+<h3>
+Total Site
+</h3>
+
+
+<p id="totalSite">
+
+0
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="summary-card">
+
+
+<h3>
+Total Withdrawal
+</h3>
+
+
+<p id="totalWithdrawal">
+
+৳0.00
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="summary-card">
+
+
+<h3>
+Profit Sites
+</h3>
+
+
+<p id="totalProfitSite">
+
+0
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Site Entries -->
+
+
+<section class="panel">
+
+
+
+<div class="section-header">
+
+
+<h2>
+SITE ENTRIES
+</h2>
+
+
+
+<button id="addSiteBtn">
+
++ Add Site
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="table-container">
+
+
+<table id="siteTable">
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Site Name
+</th>
+
+
+
+<th>
+Entry Date
+</th>
+
+
+
+<th>
+Withdrawal
+</th>
+
+
+
+<th>
+Profit
+</th>
+
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="siteTableBody">
+
+
+</tbody>
+
+
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Total -->
+
+
+<section class="panel">
+
+
+<h2>
+TOTAL
+</h2>
+
+
+
+<div class="total-box">
+
+
+
+<div>
+
+
+<span>
+Total Withdrawal
+</span>
+
+
+
+<strong id="finalTotalWithdrawal">
+
+৳0.00
+
+</strong>
+
+
+
+</div>
+
+
+
+
+
+<div>
+
+
+<span>
+Total Profit Sites
+</span>
+
+
+
+<strong id="finalProfitCount">
+
+0
+
+</strong>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Distribution -->
+
+
+<section class="panel">
+
+
+<h2>
+DISTRIBUTION
+</h2>
+
+
+
+
+<div class="table-container">
+
+
+<table class="distribution-table">
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Distribution
+</th>
+
+
+<th>
+Percentage
+</th>
+
+
+<th>
+Amount
+</th>
+
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody>
+
+
+
+<tr>
+
+
+<td>
+Engineering Cost
+</td>
+
+
+<td>
+20%
+</td>
+
+
+<td id="engineeringAmount">
+
+৳0.00
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+
+
+<td>
+Promotion Cost
+</td>
+
+
+<td>
+20%
+</td>
+
+
+<td id="promotionAmount">
+
+৳0.00
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+
+
+<td>
+Remaining Distribution
+</td>
+
+
+<td>
+60%
+</td>
+
+
+<td id="remainingAmount">
+
+৳0.00
+
+</td>
+
+
+</tr>
+
+
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Personal Distribution -->
+
+
+<section class="panel">
+
+
+<h2>
+PERSONAL DISTRIBUTION
+</h2>
+
+
+
+
+<div class="table-container">
+
+
+<table class="distribution-table">
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Name
+</th>
+
+
+<th>
+Percentage
+</th>
+
+
+<th>
+Amount
+</th>
+
+
+</tr>
+
+
+</thead>
+<tbody>
+
+
+
+<tr>
+
+
+<td>
+মো সেলিম
+</td>
+
+
+<td>
+20%
+</td>
+
+
+<td id="selimAmount">
+
+৳0.00
+
+</td>
+
+
+</tr>
+
+
+
+
+
+<tr>
+
+
+<td>
+মোহাম্মদ ফরিদ
+</td>
+
+
+<td>
+20%
+</td>
+
+
+<td id="faridAmount">
+
+৳0.00
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+
+
+<td>
+রফিকুল ইসলাম
+</td>
+
+
+<td>
+20%
+</td>
+
+
+<td id="rafiqulAmount">
+
+৳0.00
+
+</td>
+
+
+</tr>
+
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Finalize Settlement -->
+
+
+<section class="panel action-panel">
+
+
+<button id="finalizeSettlementBtn">
+
+
+FINALIZE SETTLEMENT
+
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Settlement History -->
+
+
+<section class="panel">
+
+
+
+<h2>
+
+SETTLEMENT HISTORY
+
+</h2>
+
+
+
+
+
+
+
+<div class="history-filter">
+
+
+
+<input
+
+type="text"
+
+id="historySearch"
+
+placeholder="Search Settlement ID">
+
+
+
+
+
+<select id="historyStatusFilter">
+
+
+<option value="">
+
+All Status
+
+</option>
+
+
+
+<option value="ACTIVE">
+
+ACTIVE
+
+</option>
+
+
+
+<option value="FINALIZED">
+
+FINALIZED
+
+</option>
+
+
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="table-container">
+
+
+
+<table>
+
+
+
+<thead>
+
+
+
+<tr>
+
+
+
+<th>
+ID
+</th>
+
+
+
+<th>
+Date
+</th>
+
+
+
+<th>
+Total Site
+</th>
+
+
+
+<th>
+Withdrawal
+</th>
+
+
+
+<th>
+Status
+</th>
+
+
+
+<th>
+Action
+</th>
+
+
+
+</tr>
+
+
+
+</thead>
+
+
+
+
+
+
+
+<tbody id="historyTableBody">
+
+
+
+</tbody>
+
+
+
+
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Backup & Restore -->
+
+
+<section class="panel">
+
+
+
+<h2>
+
+BACKUP & RESTORE
+
+</h2>
+
+
+
+
+
+
+
+<button id="exportBackupBtn">
+
+
+Export Backup
+
+
+</button>
+
+
+
+
+
+
+
+<input
+
+type="file"
+
+id="importBackupInput"
+
+accept=".json">
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Print Document -->
+
+
+<section 
+
+id="printDocument"
+
+class="print-document">
+
+
+
+<!-- Preview Controls -->
+
+<div class="print-control-panel">
+
+
+
+<button 
+id="downloadSettlementBtn">
+
+Download Memo
+
+</button>
+
+
+
+
+
+<button 
+id="printSettlementPreviewBtn">
+
+Print Memo
+
+</button>
+
+
+
+
+
+<button 
+id="closePrintPreviewBtn">
+
+Close Preview
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="printSettlementContent">
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- JavaScript Files -->
+
+
+<script src="assets/js/storage.js"></script>
+
+<script src="assets/js/calculation.js"></script>
+
+<script src="assets/js/settlement.js"></script>
+
+<script src="assets/js/history.js"></script>
+
+<script src="assets/js/backup.js"></script>
+
+<script src="assets/js/print.js"></script>
+
+<script src="assets/js/app.js"></script>
+
+
+
+
+
+</body>
+
+
+</html>
