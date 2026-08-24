@@ -1,0 +1,96 @@
+name: Deploy 11Play Weekly Settlement
+
+
+# Run workflow on every push to main branch
+on:
+  push:
+    branches:
+      - main
+
+  # Allow manual deployment
+  workflow_dispatch:
+
+
+# Required permissions for GitHub Pages
+permissions:
+
+  contents: read
+
+  pages: write
+
+  id-token: write
+
+
+
+jobs:
+
+
+  deploy:
+
+
+    name: Deploy Website
+
+
+    runs-on: ubuntu-latest
+
+
+
+    environment:
+
+      name: github-pages
+
+      url: ${{ steps.deployment.outputs.page_url }}
+
+
+
+
+
+    steps:
+
+
+
+      # Checkout repository files
+      - name: Checkout Repository
+
+        uses: actions/checkout@v4
+
+
+
+
+
+
+      # Configure GitHub Pages
+
+      - name: Setup GitHub Pages
+
+        uses: actions/configure-pages@v5
+
+
+
+
+
+
+
+      # Upload website files
+
+      - name: Upload Pages Artifact
+
+        uses: actions/upload-pages-artifact@v3
+
+        with:
+
+          path: .
+
+
+
+
+
+
+
+      # Deploy to GitHub Pages
+
+      - name: Deploy To GitHub Pages
+
+        id: deployment
+
+        uses: actions/deploy-pages@v4
