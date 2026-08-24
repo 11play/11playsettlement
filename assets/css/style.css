@@ -1,0 +1,2139 @@
+/* =========================================
+   11PLAY WEEKLY SETTLEMENT
+
+   Main Application Styles
+
+   File:
+   assets/css/style.css
+
+   Final Production Version
+========================================= */
+
+
+/* =========================================
+   Global Reset
+========================================= */
+
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+
+
+:root{
+
+
+    --primary-color:#0b3d91;
+
+    --secondary-color:#1e6fd9;
+
+    --success-color:#198754;
+
+    --danger-color:#dc3545;
+
+    --light-bg:#f5f7fb;
+
+    --white:#ffffff;
+
+    --dark:#1f2937;
+
+    --border:#d9dee8;
+
+
+}
+
+
+
+
+
+
+
+/* =========================================
+   Body
+========================================= */
+
+
+body{
+
+
+    font-family:
+
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+
+    background:
+
+    var(--light-bg);
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+    min-height:100vh;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Wrapper
+========================================= */
+
+
+.app-wrapper{
+
+
+    width:100%;
+
+
+    max-width:1400px;
+
+
+    margin:auto;
+
+
+    padding:20px;
+
+
+    position:relative;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Background Watermark
+========================================= */
+
+
+.background-logo{
+
+
+    position:fixed;
+
+
+    top:50%;
+
+
+    left:50%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+
+    opacity:0.04;
+
+
+    z-index:-1;
+
+
+    pointer-events:none;
+
+
+
+}
+
+
+
+
+
+
+
+.background-logo img{
+
+
+    width:500px;
+
+
+    max-width:80vw;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Header
+========================================= */
+
+
+.main-header{
+
+
+    background:
+
+    var(--white);
+
+
+
+    border-radius:15px;
+
+
+
+    padding:25px;
+
+
+
+    display:flex;
+
+
+
+    justify-content:space-between;
+
+
+
+    align-items:center;
+
+
+
+    gap:20px;
+
+
+
+    box-shadow:
+
+    0 5px 20px rgba(0,0,0,.08);
+
+
+
+    margin-bottom:20px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.brand-area{
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    gap:15px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.main-logo{
+
+
+    width:80px;
+
+
+
+    height:80px;
+
+
+
+    object-fit:contain;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.brand-area h1{
+
+
+    font-size:32px;
+
+
+
+    color:
+
+    var(--primary-color);
+
+
+
+    letter-spacing:2px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.brand-area p{
+
+
+    font-size:16px;
+
+
+
+    color:#666;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Settlement Info
+========================================= */
+
+
+.settlement-info{
+
+
+    display:flex;
+
+
+
+    gap:15px;
+
+
+
+    flex-wrap:wrap;
+
+
+
+}
+
+
+
+
+
+
+
+.settlement-info div{
+
+
+    background:#f8fafc;
+
+
+
+    border:1px solid var(--border);
+
+
+
+    padding:12px 18px;
+
+
+
+    border-radius:10px;
+
+
+
+    min-width:170px;
+
+
+
+}
+
+
+
+
+
+
+
+.settlement-info span{
+
+
+    display:block;
+
+
+
+    font-size:12px;
+
+
+
+    color:#777;
+
+
+
+}
+
+
+
+
+
+
+
+
+.settlement-info strong{
+
+
+    display:block;
+
+
+
+    margin-top:5px;
+
+
+
+    font-size:15px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Panels
+========================================= */
+
+
+.panel{
+
+
+    background:
+
+    var(--white);
+
+
+
+    border-radius:15px;
+
+
+
+    padding:25px;
+
+
+
+    margin-bottom:20px;
+
+
+
+    box-shadow:
+
+    0 5px 20px rgba(0,0,0,.06);
+
+
+
+}
+
+
+
+
+
+
+
+
+.panel h2{
+
+
+    font-size:20px;
+
+
+
+    margin-bottom:20px;
+
+
+
+    color:
+
+    var(--primary-color);
+
+
+
+    border-left:
+
+    5px solid var(--secondary-color);
+
+
+
+    padding-left:10px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Buttons
+========================================= */
+
+
+button{
+
+
+    border:none;
+
+
+
+    cursor:pointer;
+
+
+
+    padding:12px 22px;
+
+
+
+    border-radius:8px;
+
+
+
+    background:
+
+    var(--primary-color);
+
+
+
+    color:white;
+
+
+
+    font-size:14px;
+
+
+
+    transition:.2s;
+
+
+
+}
+
+
+
+
+
+
+
+
+button:hover{
+
+
+    opacity:.85;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+button:disabled{
+
+
+    opacity:.5;
+
+
+
+    cursor:not-allowed;
+
+
+
+}
+
+
+
+
+
+
+
+
+#finalizeSettlementBtn{
+
+
+    background:
+
+    var(--danger-color);
+
+
+
+    width:100%;
+
+
+
+    font-size:18px;
+
+
+
+    font-weight:bold;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Print / Download Control Buttons
+========================================= */
+
+
+.print-controls{
+
+
+    display:flex;
+
+
+    gap:10px;
+
+
+    margin-bottom:20px;
+
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+.print-controls button{
+
+
+    background:var(--secondary-color);
+
+
+}
+
+
+
+#printBtn{
+
+
+    background:var(--primary-color);
+
+
+}
+
+
+
+#downloadSettlementBtn{
+
+
+    background:var(--success-color);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Summary Cards
+========================================= */
+
+
+.summary-grid{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+
+    gap:20px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.summary-card{
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #f8fbff,
+    #ffffff
+    );
+
+
+
+    border:1px solid var(--border);
+
+
+
+    border-radius:12px;
+
+
+
+    padding:25px;
+
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+
+
+
+
+
+.summary-card h3{
+
+
+    color:#666;
+
+
+
+    font-size:15px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.summary-card p{
+
+
+    margin-top:10px;
+
+
+
+    font-size:28px;
+
+
+
+    font-weight:bold;
+
+
+
+    color:
+
+    var(--primary-color);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Table Container
+========================================= */
+
+
+.table-container{
+
+
+    width:100%;
+
+
+    overflow-x:auto;
+
+
+    overflow-y:hidden;
+
+
+    -webkit-overflow-scrolling:touch;
+
+
+
+}
+
+
+
+
+
+
+
+
+table{
+
+
+    width:100%;
+
+
+
+    border-collapse:collapse;
+
+
+
+}
+
+
+
+
+
+
+
+
+th{
+
+
+    background:#f1f5f9;
+
+
+
+    color:#334155;
+
+
+
+    padding:14px;
+
+
+
+    text-align:left;
+
+
+
+    font-size:14px;
+
+
+
+}
+
+
+
+
+
+
+
+
+td{
+
+
+    padding:13px;
+
+
+
+    border-bottom:
+
+    1px solid var(--border);
+
+
+
+    font-size:14px;
+
+
+
+}
+
+
+
+
+
+
+
+
+tr:hover{
+
+
+    background:#fafafa;
+
+
+
+}
+/* =========================================
+   Total Box
+========================================= */
+
+
+.total-box{
+
+
+    display:flex;
+
+
+    justify-content:space-around;
+
+
+    gap:20px;
+
+
+
+}
+
+
+
+
+
+
+
+.total-box div{
+
+
+    background:#f8fafc;
+
+
+    border:1px solid var(--border);
+
+
+    padding:20px;
+
+
+    border-radius:12px;
+
+
+    flex:1;
+
+
+
+}
+
+
+
+
+
+
+
+.total-box span{
+
+
+    display:block;
+
+
+    color:#666;
+
+
+
+}
+
+
+
+
+
+
+
+.total-box strong{
+
+
+    font-size:25px;
+
+
+    color:
+
+    var(--primary-color);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   History Filter
+========================================= */
+
+
+.history-filter{
+
+
+    display:flex;
+
+
+    gap:15px;
+
+
+    margin-bottom:20px;
+
+
+
+}
+
+
+
+
+
+
+
+input,
+select{
+
+
+    padding:12px;
+
+
+    border-radius:8px;
+
+
+    border:
+
+    1px solid var(--border);
+
+
+
+    background:white;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Print Container
+========================================= */
+
+
+.print-document{
+
+
+    display:none;
+
+
+    background:white;
+
+
+    padding:40px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Official Print Document
+========================================= */
+
+
+.official-document{
+
+
+    position:relative;
+
+
+    width:100%;
+
+
+    background:white;
+
+
+    padding:30px;
+
+
+    overflow:hidden;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.print-watermark{
+
+
+    position:absolute;
+
+
+    top:50%;
+
+
+    left:50%;
+
+
+    transform:
+
+    translate(-50%,-50%);
+
+
+
+    opacity:.035;
+
+
+    z-index:0;
+
+
+
+}
+
+
+
+
+
+
+
+
+.print-watermark img{
+
+
+    width:420px;
+
+
+    max-width:80vw;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.document-header{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+    text-align:center;
+
+
+    margin-bottom:25px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.document-logo{
+
+
+    width:100px;
+
+
+    height:100px;
+
+
+    object-fit:contain;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.document-header h1{
+
+
+    font-size:32px;
+
+
+    color:
+
+    var(--primary-color);
+
+
+
+    letter-spacing:3px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.document-header h2{
+
+
+    margin-top:10px;
+
+
+    font-size:20px;
+
+
+    color:#333;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.document-header p{
+
+
+    margin-top:8px;
+
+
+    color:#666;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.document-section{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+    margin-top:25px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.document-section h3{
+
+
+    font-size:18px;
+
+
+    color:
+
+    var(--primary-color);
+
+
+
+    border-left:
+
+    4px solid var(--secondary-color);
+
+
+
+    padding-left:8px;
+
+
+    margin-bottom:12px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.document-section table{
+
+
+    width:100%;
+
+
+    border-collapse:collapse;
+
+
+
+}
+
+
+
+
+
+
+
+
+.document-section th,
+.document-section td{
+
+
+    border:
+
+    1px solid #ddd;
+
+
+
+    padding:10px;
+
+
+    font-size:13px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.document-section th{
+
+
+    background:#f1f5f9;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Signature
+========================================= */
+
+
+.signature-section{
+
+
+    margin-top:60px;
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+
+}
+
+
+
+
+
+
+
+
+.signature-box{
+
+
+    margin-top:30px;
+
+
+    padding-top:10px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.signature-line{
+
+
+    margin:20px 0;
+
+
+    width:250px;
+
+
+    border-bottom:
+
+    1px solid #000;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.document-footer{
+
+
+    margin-top:40px;
+
+
+    text-align:center;
+
+
+    font-size:12px;
+
+
+    color:#777;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Preview Action Area
+========================================= */
+
+
+.preview-actions{
+
+
+    display:flex;
+
+
+    gap:15px;
+
+
+    margin-bottom:20px;
+
+
+    flex-wrap:wrap;
+
+
+
+}
+
+
+
+.preview-actions button{
+
+
+    min-width:140px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Print Mode
+========================================= */
+
+
+@media print{
+
+
+
+    body{
+
+
+        background:white;
+
+
+    }
+
+
+
+
+
+
+
+    body *{
+
+
+        visibility:hidden;
+
+
+    }
+
+
+
+
+
+
+
+
+    #printDocument,
+    #printDocument *{
+
+
+        visibility:visible;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    #printDocument{
+
+
+        display:block !important;
+
+
+        position:absolute;
+
+
+        top:0;
+
+
+        left:0;
+
+
+        width:100%;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .official-document{
+
+
+        min-height:100vh;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    button,
+    .no-print{
+
+
+        display:none !important;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    @page{
+
+
+        size:A4;
+
+
+        margin:15mm;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Tablet Responsive
+========================================= */
+
+
+@media(max-width:900px){
+
+
+
+    .main-header{
+
+
+        flex-direction:column;
+
+
+        align-items:flex-start;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .settlement-info{
+
+
+        width:100%;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .settlement-info div{
+
+
+        flex:1;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .summary-grid{
+
+
+        grid-template-columns:1fr;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Mobile Responsive
+========================================= */
+
+
+@media(max-width:600px){
+
+
+
+    .app-wrapper{
+
+
+        padding:10px;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .brand-area h1{
+
+
+        font-size:24px;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .main-logo{
+
+
+        width:60px;
+
+
+        height:60px;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .panel{
+
+
+        padding:15px;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .total-box{
+
+
+        flex-direction:column;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .history-filter{
+
+
+        flex-direction:column;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .document-logo{
+
+
+        width:70px;
+
+
+        height:70px;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .official-document{
+
+
+        padding:15px;
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .document-header h1{
+
+
+        font-size:24px;
+
+
+
+    }
+
+
+
+
+
+    .preview-actions{
+
+
+        flex-direction:column;
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Mobile Table Horizontal Scroll Fix
+   Only Mobile
+========================================= */
+
+
+@media(max-width:600px){
+
+
+    body{
+
+
+        overflow-x:hidden;
+
+
+    }
+
+
+
+
+
+
+    .app-wrapper{
+
+
+        width:100%;
+
+
+        overflow-x:hidden;
+
+
+    }
+
+
+
+
+
+
+    .table-container{
+
+
+        width:100%;
+
+
+        overflow-x:auto;
+
+
+        overflow-y:hidden;
+
+
+        -webkit-overflow-scrolling:touch;
+
+
+
+    }
+
+
+
+
+
+
+    .table-container table{
+
+
+        min-width:700px;
+
+
+        width:700px;
+
+
+
+    }
+
+
+
+
+
+
+    .table-container thead{
+
+
+        display:table-header-group;
+
+
+    }
+
+
+
+
+
+
+    .table-container tbody{
+
+
+        display:table-row-group;
+
+
+    }
+
+
+
+
+
+
+    .table-container tr{
+
+
+        display:table-row;
+
+
+    }
+
+
+
+
+
+
+    .table-container th,
+    .table-container td{
+
+
+        display:table-cell;
+
+
+        white-space:nowrap;
+
+
+
+    }
+
+
+
+}
+.print-control-panel{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.print-control-panel button{
+
+    min-width:140px;
+
+}
